@@ -1,22 +1,13 @@
+<%   
+places = ["Cass Lake", "Banff", "Grand Canyon"]
+%>
+
+
 
   <h1>Places I Have Been</h1>
   
-  <p>
-    <@place1>
-    <@place2>
-    <@place3>
-  </p>
-  <p>
-    @place_new
-  </p>
-
-   <ul>
-   <% for company in @companies %>
-    <li>
-      <a href="/companies/<%= company["id"] %>"><%= company["name"] %></a>
-    </li>
-   <% end %>
+<ul>
+<% for place in places%> 
+<% end %>
 </ul>
 
-<p><a href="/companies/new">Create a new company</a></p>
- 
