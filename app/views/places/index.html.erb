@@ -1,14 +1,22 @@
-<% if @name %>
+
   <h1>Places I Have Been</h1>
   
   <p>
-    <img src="/images/dice/<%= @die1 %>.svg">
-    <img src="/images/dice/<%= @die2 %>.svg">
+    <@place1>
+    <@place2>
+    <@place3>
   </p>
   <p>
-    The total is <%= @total %>
+    @place_new
   </p>
-  <p>
-    <a href="/dice?name=<%= @name %>">Roll Again</a>
-  </p>
-<% else %>
+
+   <ul>
+   <% for company in @companies %>
+    <li>
+      <a href="/companies/<%= company["id"] %>"><%= company["name"] %></a>
+    </li>
+   <% end %>
+</ul>
+
+<p><a href="/companies/new">Create a new company</a></p>
+ 
