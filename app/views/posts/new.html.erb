@@ -2,15 +2,14 @@
 
 <%= form_with :model => @post do |form| %>
   <p>
+ <%= form.label "name", "Place Name" %>
     <%= form.text_field "title" %>
+    <%= form.label "description", "Description" %>
     <%= form.text_field "description" %>
+    <%= form.label "posted_on", "Posted On" %>
     <%= form.date_field "posted_on" %>
   </p>
-  <p>
-    <%= form.text_field "title" %>
-    <%= form.text_field "description" %>
-    <%= form.date_field "posted_on" %>
-  </p>
+
   <!-- So we can transfer state from the previous action to the next -->
   <%= form.hidden_field "place_id" %>
   <%= form.submit %>
